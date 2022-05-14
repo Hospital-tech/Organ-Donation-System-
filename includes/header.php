@@ -3,26 +3,39 @@
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="container">
-            <a class="navbar-brand" href="index.php">Blood & Organ Donation Management System</a>
+            
             <div class="collapse navbar-collapse" id="navbarExample">
                 <ul class="navbar-nav ml-auto">
-                    <li class="nav-item">
-                        <a class="nav-link" href="page.php?type=aboutus">About</a>
+                <li class="nav-item">
+                        <a class="nav-link" href="index.php">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="page.php?type=donor">Why Become Donor</a>
+                        <a class="nav-link" href="page.php?type=aboutus">About Us</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="become-donar.php">Become a Donar</a>
+                        <a class="nav-link" href="page.php?type=donor">Blog</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="become-donar.php">Register as a Blood Donar</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="becomeorgan-donar.php">Register as a Organ Donar</a>
                     </li>
                  
                      <li class="nav-item">
                         <a class="nav-link" href="search-donor.php">Search Blood</a>
                     </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="search-organdonor.php">Search Oragn</a>
+                    </li>
                       <li class="nav-item">
                         <a class="nav-link" href="contact.php">Contact us</a>
                     </li>
-                 
+
+                    
+                    
+                   
                  
                 </ul>
             </div>
