@@ -15,32 +15,18 @@ $mobile=$_POST['mobileno'];
 $email=$_POST['emailid'];
 $age=$_POST['age'];
 $gender=$_POST['gender'];
-<<<<<<< HEAD
 $blodgroup=$_POST['bloodgroup'];
 $address=$_POST['address'];
 $message=$_POST['message'];
 $status=1;
 $sql="INSERT INTO  tblblooddonars(FullName,MobileNumber,EmailId,Age,Gender,BloodGroup,Address,Message,status) VALUES(:fullname,:mobile,:email,:age,:gender,:blodgroup,:address,:message,:status)";
-=======
-$organtype=$_POST['organtype'];
-$hospitalname=$_POST['hospitalname'];
-$address=$_POST['address'];
-$message=$_POST['message'];
-$status=1;
-$sql="INSERT INTO  tblorgandonars(FullName,MobileNumber,EmailId,Age,Gender,OrganType,HospitalName,Address,Message,status) VALUES(:fullname,:mobile,:email,:age,:gender,:organtype,:hospitalname,:address,:message,:status)";
->>>>>>> sprint3
 $query = $dbh->prepare($sql);
 $query->bindParam(':fullname',$fullname,PDO::PARAM_STR);
 $query->bindParam(':mobile',$mobile,PDO::PARAM_STR);
 $query->bindParam(':email',$email,PDO::PARAM_STR);
 $query->bindParam(':age',$age,PDO::PARAM_STR);
 $query->bindParam(':gender',$gender,PDO::PARAM_STR);
-<<<<<<< HEAD
 $query->bindParam(':blodgroup',$blodgroup,PDO::PARAM_STR);
-=======
-$query->bindParam(':organtype',$organtype,PDO::PARAM_STR);
-$query->bindParam(':hospitalname',$hospitalname,PDO::PARAM_STR);
->>>>>>> sprint3
 $query->bindParam(':address',$address,PDO::PARAM_STR);
 $query->bindParam(':message',$message,PDO::PARAM_STR);
 $query->bindParam(':status',$status,PDO::PARAM_STR);
@@ -70,11 +56,7 @@ $error="Something went wrong. Please try again";
 	<meta name="author" content="">
 	<meta name="theme-color" content="#3e454c">
 	
-<<<<<<< HEAD
-	<title>BBDMS| Admin Add Donor</title>
-=======
 	<title>Admin Add Donor</title>
->>>>>>> sprint3
 
 	<!-- Font awesome -->
 	<link rel="stylesheet" href="css/font-awesome.min.css">
@@ -134,7 +116,7 @@ function isNumberKey(evt)
 				<div class="row">
 					<div class="col-md-12">
 					
-						<h2 class="page-title">Add Donor</h2>
+						<h2 class="page-title">Add Organ Donor Name</h2>
 
 						<div class="row">
 							<div class="col-md-12">
@@ -176,23 +158,13 @@ function isNumberKey(evt)
 <option value="Female">Female</option>
 </select>
 </div>
-<<<<<<< HEAD
-<label class="col-sm-2 control-label">Blood Group<span style="color:red">*</span></label>
-<div class="col-sm-4">
-
-
-<select name="bloodgroup" class="form-control" required>
-<option value="">Select</option>
-<?php $sql = "SELECT * from  tblbloodgroup ";
-=======
-<label class="col-sm-2 control-label">Organ Type<span style="color:red">*</span></label>
+<label class="col-sm-2 control-label">OrganType<span style="color:red">*</span></label>
 <div class="col-sm-4">
 
 
 <select name="organtype" class="form-control" required>
 <option value="">Select</option>
-<?php $sql = "SELECT * from  tblorgantype ";
->>>>>>> sprint3
+<?php $sql = "SELECT * from  tblbloodgroup ";
 $query = $dbh -> prepare($sql);
 $query->execute();
 $results=$query->fetchAll(PDO::FETCH_OBJ);
@@ -201,33 +173,7 @@ if($query->rowCount() > 0)
 {
 foreach($results as $result)
 {				?>	
-<<<<<<< HEAD
 <option value="<?php echo htmlentities($result->BloodGroup);?>"><?php echo htmlentities($result->BloodGroup);?></option>
-=======
-<option value="<?php echo htmlentities($result->OrganType);?>"><?php echo htmlentities($result->OrganType);?></option>
-<?php }} ?>
-</select>
-
-</div>
-</div>
-
-<label class="col-sm-2 control-label">Hospital<span style="color:red">*</span></label>
-<div class="col-sm-4">
-
-
-<select name="hospitalname" class="form-control" required>
-<option value="">Select</option>
-<?php $sql = "SELECT * from  tblorgantype ";
-$query = $dbh -> prepare($sql);
-$query->execute();
-$results=$query->fetchAll(PDO::FETCH_OBJ);
-$cnt=1;
-if($query->rowCount() > 0)
-{
-foreach($results as $result)
-{				?>	
-<option value="<?php echo htmlentities($result->HospitalName);?>"><?php echo htmlentities($result->HospitalName);?></option>
->>>>>>> sprint3
 <?php }} ?>
 </select>
 

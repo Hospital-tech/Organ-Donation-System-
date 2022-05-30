@@ -3,7 +3,11 @@
 define('DB_HOST','localhost');
 define('DB_USER','root');
 define('DB_PASS','');
+<<<<<<< HEAD
 define('DB_NAME','bbdms');
+=======
+define('DB_NAME','organ');
+>>>>>>> sprint3
 // Establish database connection.
 try
 {
